@@ -123,6 +123,10 @@ nav ul li a:hover::after{
     }
 }
 
+.scroll{
+    margin-top: 10%;
+}
+
 /* --------about----------- */
 
 #about{
@@ -441,6 +445,10 @@ nav .fa-solid{
 
     .header-text h1{
         font-size: 30px;
+    }
+
+    .scroll{
+        margin-top:90%;
     }
 
     nav .fa-solid{
