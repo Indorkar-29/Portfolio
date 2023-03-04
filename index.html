@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/style.css" >
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <script src="https://kit.fontawesome.com/5537cd566c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span>T</span>ushar.</h1>
+                <ul id="sidemenu" >
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()" ></i>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Tushar</span><br> Indorkar From India</h1>
+            </div>
+            <div class="content">
+                <span class="text first-text">I know </span>
+                <span class="text sec-text"></span>
+            </div>
+        </div>  
+    </div>
+
+    <!-- ------------about------------ -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./assets/images/img.jpg" alt="img">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laboriosam tenetur necessitatibus eligendi deserunt blanditiis unde et enim molestiae ducimus. Reprehenderit hic quibusdam architecto. Laudantium, obcaecati facere! Ad, ut doloribus!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe natus cupiditate iusto! Laudantium tempore ut, ipsum minus illum voluptate dignissimos, pariatur cupiditate quidem non laboriosam adipisci natus ullam corrupti. Eligendi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magni minus dolorem dolorum enim. Quas, fugiat a minima necessitatibus delectus, laudantium numquam sapiente maiores corporis velit saepe provident cupiditate ex?
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('certification')" >Certification</p>
+                        <p class="tab-links" onclick="openTab('education')" >Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data Structure and Algorithm</span><br>JavaScript</li>
+                            <li><span>Frontend</span><br>Html, Css, React Js</li>
+                            <li><span>Backend</span><br>Node Js, Express Js</li>
+                            <li><span>Database</span><br>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certification">
+                        <ul>
+                            <li><span>July 2022 - January 2023</span><br>Full Stack Development from <br> 10x Academy, Hyderabad</li>
+                            <li><span>August 2021 - October 2021</span><br>Web Development from <br> Internshala.com</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018 - 2022</span><br>Bachelor of Engineering in Computer Science <br> from Abha Gaikwad Patil College <br> Nagpur </li>
+                            <li><span>2016 - 2018</span><br>HSC from Saint Francis De Sales Jr College<br> Nagpur</li>
+                            <li><span>2015 - 2016</span><br>SSC from Sayona Public School<br> Nagpur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------services--------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Programming</h2>
+                    <p>I prefer JavaScript for programming. JavaScript conforms ECMAScript standards. For I/O I use runtime system which is Node JS. By using data structures and algorithms I optimise my code which is very helpful to reduce the time complexity and space complexity of program.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-brands fa-react"></i>
+                    <h2>Frontend</h2>
+                    <p>For client side programming I use React JS which is a library built on top of JavaScript. React JS is a SPA which uses Virtual DOM. It supports jsx which is a combination of HTML and JavaScript. React JS comes with lots of NPM packages which helps to code more efficiently.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-brands fa-node"></i>
+                    <h2>Backend</h2>
+                    <p>For server side I use Node JS which is JavaScript runtime environment, runs on V8 engine. Node JS has an event-driven architecture capable of non-blocking asynchronous I/O. Express JS is a framework built on top of Node JS for Building RESTFUL API's. and for database I use MONGODB. </p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- --------------portfolio---------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./assets/images/contact-manager.png" alt="img1">
+                    <div class="layer">
+                        <h3>Contact Manager</h3>
+                        <p>For securing the contacts Authentication and Authorization is done. After successfully registering and logging in the user is able to add contacts by dragging the csv file. The csv file must contain name, designation, company, industry, email, phonenumber, country fields. </p>
+                        <a href="https://contacts-manager.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./assets/images/insta-clone.png" alt="img2">
+                    <div class="layer">
+                        <h3>Insta Clone</h3>
+                        <p>The user is able to add new posts with the name of user, description, location and image. The image should be selected from the local storage. The url is generated by using cloudinary.com and further stored in the database. </p>
+                        <a href="https://instaclone-miniproject.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./assets/images/book-store.png" alt="img3">
+                    <div class="layer">
+                        <h3>Book Store</h3>
+                        <p>Basic CURD operations, use of create, put, get and delete method is done. Material UI is used for making the website responsive.</p>
+                        <a href="https://book-store-app-3en1.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./assets/images/weather-info.png" alt="img3">
+                    <div class="layer">
+                        <h3>Weather Info</h3>
+                        <p>For getting the weather information Fetch method is used, the weather is fetched from open weather api. </p>
+                        <a href="https://weather-info-6czy.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="#" class="btn">See more</a> -->
+        </div>
+    </div>
+
+    <!-- ---------------contact-------------- -->
+
+    <div id="contact">
+         <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <a class="new" href="mailto:tushar.indorkar.29@gmail.com" ><i class="fa-sharp fa-solid fa-paper-plane"></i>tushar.indorkar.29@gmail.com</a>
+                    <a class="new" href="tel:+917038235288"><i class="fa-sharp fa-solid fa-square-phone"></i>+917038235288</a>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/tushar-indorkar29"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Indorkar-29"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="./assets/cv/Tushar's v2.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2" >Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <p>Copyright © Tushar. Made with <i class="fa-solid fa-heart"></i> by Tushar Indorkar</p>
+         </div>
+    </div>
+
+    <script  src="./assets/js/script.js"></script>
+</body>
+</html>
