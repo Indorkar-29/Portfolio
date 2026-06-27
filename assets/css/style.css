@@ -1807,13 +1807,19 @@ h2.project_heading:after {
 /*================== 10 Start Projects section css ==================  */
 .port_project_gallery .grid-item {
 	width: 33.33%;
-    clear: both;
+    float: left;
+    clear: none;
+    box-sizing: border-box;
     position: relative;
     border-radius: 3px;
     overflow: hidden;
     padding: 0 15px;
     margin-bottom: 30px;
 	text-align:left;
+}
+
+.port_project_gallery .gallery_grid {
+    visibility: hidden;
 }
 
 .port_project_gallery .grid_img:before {

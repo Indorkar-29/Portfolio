@@ -172,19 +172,46 @@ Assigned to: ThemeForest
 	// Start isotop gallery js 
 		isotop_gallery: function() {
 			if($('.gallery_grid').length > 0){
-				$('.gallery_grid').isotope({
+				var $grid = $('.gallery_grid');
+				var initGallery = function() {
+					$grid.isotope({
 						itemSelector: '.grid-item',
+						percentPosition: true,
+						masonry: {
+							columnWidth: '.grid-item'
+						},
 						filter: '*'
 					});
-					$('.port_project_gallery > .gallery_nav > ul > li').on( 'click', 'a', function() {
-						// filter button click
-						var filterValue = $( this ).attr('data-filter');
-						$('.gallery_grid').isotope({ filter: filterValue });
-
-						//active class added
-						$('a').removeClass('gallery_active');
+					$('.port_project_gallery > .gallery_nav > ul > li').on('click', 'a', function() {
+						var filterValue = $(this).attr('data-filter');
+						$grid.isotope({ filter: filterValue });
+						$('.port_project_gallery .gallery_nav a').removeClass('gallery_active');
 						$(this).addClass('gallery_active');
 					});
+					$grid.css('visibility', 'visible');
+				};
+
+				var $images = $grid.find('img');
+				if ($images.length === 0) {
+					initGallery();
+				} else {
+					var loaded = 0;
+					$images.each(function() {
+						if (this.complete && this.naturalWidth !== 0) {
+							loaded++;
+						} else {
+							$(this).one('load error', function() {
+								loaded++;
+								if (loaded === $images.length) {
+									initGallery();
+								}
+							});
+						}
+					});
+					if (loaded === $images.length) {
+						initGallery();
+					}
+				}
 			}
 		},
 	/*------------------------------------------------------------------*/ 
@@ -676,8 +703,9 @@ contact_form: function() {
 	
 	
 	$(window).on('load', function() {
-		$(".status").fadeOut(1800);
-		$(".preloader").delay(1000).fadeOut("slow");
+		$(".status").fadeOut(500);
+		$(".preloader").delay(200).fadeOut("slow");
 	});
-		
-}(jQuery));	
+
+}(jQuery));
+
